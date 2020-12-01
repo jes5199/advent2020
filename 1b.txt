@@ -1,0 +1,21 @@
+jes@theremon ~/Dropbox/code/advent2020 (master) $ sort -n input1.txt | head
+35
+453
+537
+777
+790
+810
+863
+983
+1037
+1038
+jes@theremon ~/Dropbox/code/advent2020 (master) $ irb
+453 +
+WARNING: This version of ruby is included in macOS for compatibility with legacy software.
+In future versions of macOS the ruby runtime will not be available by
+default, and may require you to install an additional package.
+
+irb(main):001:0> 453 + 777 + 810
+=> 2040
+irb(main):002:0> 453 + 777 + 790
+=> 2020
