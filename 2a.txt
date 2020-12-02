@@ -1,0 +1,2 @@
+jes@theremon ~/Dropbox/code/advent2020 (main*) $ sed 's/\([0-9]*\)-\([0-9]*\) \(.\): \(.*\)/echo \4 | tr -Cd \3 | sed -nE "\/^\3{\1,\2}$\/p"/' input2.txt > 2a.sh && sh 2a.sh | wc -l
+     454
