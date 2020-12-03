@@ -9,9 +9,7 @@ for rule in .1 ...1 .....1 .......1 .2 ; do
   cat input3.txt > tmp3b
 
   while [ -s tmp3b ] ; do
-    sed -i bak -nE '2,$p' tmp3b
-    sed -i bak -nE $skips',$p' tmp3b
-    sed -i bak 's/\('$dots'\)\(.*\)/\2\1/' tmp3b
+    sed -i '' '1,'$skips'd; s/\('$dots'\)\(.*\)/\2\1/' tmp3b
     sed -n '1s/^#.*/1/p' tmp3b
   done | wc -l | tee -a tmp3b.counts
 done
