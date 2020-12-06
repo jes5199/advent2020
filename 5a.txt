@@ -1,0 +1,4 @@
+jes@theremon ~/Dropbox/code/advent2020 (main*) $ sed 's/^$/ $/' input5.txt| tr '\n$' ' \n' | tr -d ' ' | sed ":again
+s/\(.\)\(.*\)\1/\1\2/g
+t again" | tr -d '\n' | wc -c
+    6726
