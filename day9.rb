@@ -10,12 +10,12 @@ window = 25
 
 p numbers
 
-sums = (1..window).map do |t|
-  p ( numbers[0...-1].zip(numbers[t..-1]).map{|a,b| a && b && [a,b]} )
-  numbers[0...(-t)].zip(numbers[t..-1]).map{|a,b| a && b && a+b}
-end
+##sums = (1..window).map do |t|
+##  p ( numbers[0...-1].zip(numbers[t..-1]).map{|a,b| a && b && [a,b]} )
+##  numbers[0...(-t)].zip(numbers[t..-1]).map{|a,b| a && b && a+b}
+##end
 
-sums.each {|sum| p sum}
+##sums.each {|sum| p sum}
 
 num = nil
 (window...(numbers.length)).each do |pos|
@@ -23,7 +23,8 @@ num = nil
   matched = false
   (0...window).each do |y|
     ((pos-window)...(pos-y)).each do |x|
-      if sums[y][x] == num
+      val = numbers[x] + numbers[x+y+1]
+      if val == num
         matched = true
         break
       end
