@@ -1,0 +1,4 @@
+irb(main):019:0> File.open("input10.txt").each_line.map(&:to_i).sort.each_cons(2).map{|a,b| b-a}.select{|a| a == 3}.count + 1
+=> 32
+irb(main):020:0> File.open("input10.txt").each_line.map(&:to_i).sort.each_cons(2).map{|a,b| b-a}.select{|a| a == 1}.count + 1
+=> 68
